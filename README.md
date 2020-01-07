@@ -1,4 +1,4 @@
-# 管理员 2319513900@qq.com 密码 111111
+# 管理员（账号 2319513900@qq.com 密码 111111）
 # lgl_vue_pc_graduation_project
 
 ## Project setup
