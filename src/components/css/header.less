@@ -1,0 +1,190 @@
+@charset 'utf-8';
+
+@import url(../../assets/css/flex.less);
+
+.header {
+    width: 100%;
+    height: 70px;
+    font-family: 'light_400';
+    margin-bottom: 50px;
+    .nav {
+
+        margin-left: 50px;
+        margin: 0 auto;
+        max-width: 1200px;
+        .f_between();
+
+        .home {
+            font-size: 24px;
+            width: 10%;
+            .f_center();
+
+            img {
+                height: 60px;
+                object-fit: contain;
+            }
+
+            a:active {
+                color: #333;
+            }
+        }
+
+        .home:hover {
+            cursor: pointer;
+        }
+
+        .left {
+            flex: 1;
+            margin-left: 100px;
+            .myflex();
+
+            .item {
+                margin-right: 30px;
+                position: relative;
+
+                a {
+                    font-size: 14px;
+                    color: @c_grey4;
+                }
+            }
+            .item:hover{
+                cursor: pointer;
+            }
+
+            .item:hover::after {
+                display: block;
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80%;
+                bottom: -10px;
+                height: 4px;
+                background: @c_purple1;
+                border-radius: 10px;
+            }
+        }
+
+        .search {
+            width: 250px;
+            margin: 20px 0;
+            border: 1px solid @c_grey6;
+            margin-left: 1px;
+            border-radius: 2px;
+            .f_between();
+            height: 30px;
+            box-shadow: 0 0 5px 2px #eee;
+
+            label {
+                padding-right: 8px;
+                .f_center();
+
+                img {
+                    height: 24px;
+                    object-fit: contain;
+                }
+            }
+
+            #search-key {
+                color: @c_purple1;
+                padding-left: 10px;
+                width: 100%;
+                margin: 0 10px;
+                width: 100%;
+            }
+        }
+
+        .right {
+            width: 200px;
+            position: relative;
+            .myflex();
+
+            .edit {
+                margin: auto 30px;
+                .myflex();
+                align-items: center;
+                justify-content: flex-end;
+
+                img {
+                    height: 40px;
+                    object-fit: contain;
+                }
+
+                img:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .self {
+                width: 70px;
+                .f_center();
+                justify-content: flex-start;
+                img {
+                    height: 40px;
+                    border-radius: 50%;
+                    border: 1px solid #fff;
+                    box-shadow: 1px 0 5px 2px #eee;
+
+                }
+                img:hover {
+                    cursor: pointer;
+                }
+            }
+
+            ul {
+                padding: 10px 0;
+                background: #fff;
+                position: absolute;
+                transition: all .3s;
+                top: 44px;
+                right:-16px;
+                width: 70px;
+                z-index: 2;
+
+                .item {
+                    height: 30px;
+                    .f_center();
+
+                    a {
+                        color: @c_grey4;
+                        font-size: 12px;
+                    }
+
+                    a:hover,
+                    a:active {
+                        color: @c_purple1;
+                    }
+                }
+            }
+        }
+
+        .login-register {
+            width: 200px;
+            .f_center();
+            justify-content: flex-end;
+            .login,
+            .register {
+                .f_center();
+                font-size: 14px;
+                color: @c_purple1;
+                height: 30px;
+                width: 48px;
+                border: 1px solid @c_semidark;
+                border-radius: 4px;
+            }
+            .login{
+                background: @c_primary;
+                margin-right: 30px;
+                a{
+                    color: #fff;
+                }
+            }
+            .register{
+                background: @c_dark;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

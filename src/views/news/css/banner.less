@@ -1,0 +1,70 @@
+@charset 'utf-8';
+
+@import url(../../../assets/css/flex.less);
+
+.banner {
+    .swiper-button-prev,
+    .swiper-button-next {
+        background: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        .f_center();
+        background: rgba(0, 0, 0, .2);
+
+        .my-pre,
+        .my-next {
+            width: 12px;
+            height: 12px;
+            transform: rotate(45deg);
+        }
+
+        .my-next {
+            border-top: 1px solid #fff;
+            border-right: 1px solid #fff;
+            margin-right: 4px;
+        }
+
+        .my-pre {
+            border-bottom: 1px solid #fff;
+            border-left: 1px solid #fff;
+            margin-left: 4px;
+        }
+    }
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        background: rgba(0, 0, 0, .5);
+    }
+
+    .swiper-container {
+        width: 100%;
+
+        .swiper-pagination {
+            .f_center();
+            bottom: 15px;
+
+            .my-pagination-bullet {
+                margin: 0 5px;
+                display: inline-block;
+                width: 40px;
+                height: 2px;
+                background: #fff;
+                opacity: .2;
+            }
+
+            .my-pagination-bullet:hover {
+                cursor: pointer;
+            }
+
+            .my-pagination-bullet-active {
+                margin: 0 5px;
+                display: inline-block;
+                width: 40px;
+                height: 2px;
+                background: #fff;
+                opacity: 1;
+            }
+        }
+    }
+}

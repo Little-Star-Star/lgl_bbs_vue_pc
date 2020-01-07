@@ -1,0 +1,53 @@
+@charset 'utf-8';
+
+.myflex() {
+    display: flex;
+    display: -webkit-flex;
+}
+
+.f_center() {
+    .myflex();
+    justify-content: center;
+    align-items: center;
+}
+.f_between(){
+    .myflex();
+    justify-content: space-between;
+    align-items: center;
+}
+.a_block(){
+    display: block;
+    font-size: 0;
+    line-height: 1;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+    font-size:0;
+}
+
+@c_primary: #44a0b3;
+@c_grey: rgba(68, 160, 179, .06);
+@c_dark: rgba(68, 160, 179, .5);
+@c_dark1: rgba(68, 160, 179, .3);
+@c_semidark: rgba(68, 160, 179, .5);
+
+
+@c_purple1:#771177;
+@c_purple2:#966d80;
+@c_purple3:#f5c4da;
+// @c_purple2:#f8def8;
+@c_grey2:#333;
+@c_grey3:#666;
+@c_grey4:#717171;
+@c_grey5:#999;
+@c_grey6:#ddd;
+@c_grey7:#f1f1f1;
+@c_grey8:#f8f8f8;
+
+@c_red1:#f44;

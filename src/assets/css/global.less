@@ -1,0 +1,433 @@
+@charset 'utf-8';
+
+@font-face{
+  font-family: 'light_700';
+  src:url('../font/PingFang-SC-Semibold-2.ttf');
+}
+@font-face{
+  font-family: 'light_400';
+  src:url('../font/PingFang-Jian-ChangGuiTi-2.ttf');
+}
+@font-face{
+  font-family: 'light_200';
+  src: url('../font/PingFang-SC-Light-2.otf')
+}
+html,
+body {
+  font-family:'light_400', Arial, '微软雅黑';
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+/*上篇提到过，删除文本框中的叉号*/
+input::-ms-reveal {
+  display: none;
+}
+
+/*删除密码框中的小眼睛*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  // font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  // -webkit-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  // user-select: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  // line-height: 1;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom */
+
+a {
+  -webkit-backface-visibility: hidden;
+  text-decoration: none;
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #999;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #999;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.myflex() {
+  display: flex;
+  display: -webkit-flex;
+}
+
+.f_center() {
+  .myflex();
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button-prev,.swiper-button-next{
+  background: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  .f_center();
+  background: rgba(0, 0, 0, .2);
+  .my-pre,.my-next{
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+  }
+  .my-next{
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    margin-right: 4px;
+  }
+  .my-pre{
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    margin-left: 4px;
+  }
+}
+
+.swiper-button-prev:hover,.swiper-button-next:hover{
+  background: rgba(0, 0, 0, .5);
+}
+
+.swiper-container {
+  width: 100%;
+  // max-width: 1200px;
+  
+  .swiper-slide{
+    a{
+      img{
+        height: 384px;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+  .swiper-pagination {
+    .f_center();
+    bottom: 15px;
+    .my-pagination-bullet {
+      margin: 0 5px;
+      display: inline-block;
+      width: 40px;
+      height: 2px;
+      background: #fff;
+      opacity: .2;
+    }
+    .my-pagination-bullet:hover{
+      cursor: pointer;
+    }
+    .my-pagination-bullet-active {
+      margin: 0 5px;
+      display: inline-block;
+      width: 40px;
+      height: 2px;
+      background: #fff;
+      opacity: 1;
+    }
+  }
+}
+@media screen and (max-width: 1366px){
+  .swiper-container{
+    .swiper-slide{
+      a{
+        img{
+          height: 273px;
+        }
+      }
+    }
+  }
+}
+// 提示
+
+.notice{
+  position: fixed;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;
+  font-size: 12px;
+  font-family: 'light_700';
+  color: #fff;
+  animation: a_notice 1s;
+  border-radius: 4px;
+  z-index: 1000000;
+}
+
+@keyframes a_notice{
+  0%{
+    opacity: 0;
+    background: #fff;
+    top: 0;
+  }
+  100%{
+    opacity: 1;
+    top: 50px;
+  }
+}
+
+.success{
+  background: #00cc66;
+}
+
+.warning{
+  background: #ff9900;
+}
+.error{
+  background: #ff3300;
+}
+
+.only-notice{
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  .f_center();
+  z-index: 2;
+  animation: showOnlyNotice 1s;
+  .wrapper{
+    height: 200px;
+    width: 400px;
+    .f_center();
+    flex-direction: column;
+    position: relative;
+    font-size: 16px;
+    font-family: 'light_700';
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+    div{
+      .f_center();
+    }
+    .only-notice-close{
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      img{
+        height: 20px;
+        width: 20px;
+        object-fit: contain;
+      }
+    }
+    .title-1{
+      color: #666;
+      margin-top: 24px;
+    }
+    .title-2{
+      color: #f44;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+    .only-notice-confirm{
+      margin-top: 30px;
+      color: #fff;
+      background: #f44;
+      border-radius: 4px;
+      width: 100px;
+      height: 36px;
+    }
+    .only-notice-confirm:hover,.only-notice-close:hover{
+      cursor: pointer;
+    }
+  }  
+  @keyframes showOnlyNotice {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+}
+
+.edit {
+  margin: 0 auto 50px;
+  width: 100%;
+  #wang {
+    width: 100%;
+    min-height: 800px;
+    > div:last-child{
+      min-height: 800px !important;
+    }
+  }
+}

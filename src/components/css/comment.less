@@ -1,0 +1,260 @@
+@charset 'utf-8';
+
+@import url(../../assets/css/flex.less);
+
+.comment {
+  margin-top: 40px;
+  .part-1 {
+    .f_center();
+    align-items: flex-start;
+    .left {
+      width: 80px;
+      margin-right: 20px;
+      .f_center();
+      img {
+        border-radius: 50%;
+        background: @c_grey7;
+        height: 70px;
+        object-fit: contain;
+      }
+    }
+    .right {
+      flex: 1;
+      overflow: hidden;
+      textarea {
+        // transform: translateX(30px);
+        height: 150px;
+        width: 100%;
+        border: 2px solid @c_grey7;
+        padding: 20px 30px;
+        font-size: 18px;
+        font-family: "light_400";
+        color: @c_grey2;
+      }
+      .user {
+        border: 2px solid @c_grey7;
+        height: 60px;
+        transform: translateY(-10px);
+        .f_between();
+        .name {
+          font-size: 24px;
+          font-family: "light_700";
+          color: @c_grey2;
+          margin-left: 30px;
+        }
+        .submit {
+          .f_center();
+          margin-right: 30px;
+          border-radius: 20px;
+          height: 36px;
+          padding: 0 20px;
+          background: linear-gradient(45deg, @c_primary 0%, @c_purple1 100%);
+          color: #fff;
+          font-size: 20px;
+          font-family: "light_700";
+          // box-shadow: 0 2px 5px 2px @c_primary;
+          opacity: 0.9;
+          transition: all 0.3s;
+        }
+        .submit:hover {
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .part-2 {
+    margin: 30px 30px 0;
+    .f_between();
+    padding-bottom: 30px;
+    align-items: flex-end;
+    border-bottom: 1px solid @c_grey7;
+    .left {
+      span {
+        color: @c_red1;
+        font-size: 28px;
+        font-family: "light_700";
+        margin-right: 10px;
+      }
+      font-size: 20px;
+      font-family: "light_700";
+      color: @c_grey3;
+    }
+    .right {
+      font-size: 18px;
+      font-family: "light_400";
+      color: @c_grey2;
+      .most-new {
+      }
+      .split {
+        margin: 0 10px;
+        font-size: 16px;
+      }
+      .most-hot {
+        color: @c_grey3;
+      }
+
+      .most-new:hover,
+      .most-hot:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .part-3 {
+    .parent {
+      > li {
+        font-size: 14px;
+        font-family: "light_700";
+        text-align: left;
+        padding: 30px 0;
+        border-bottom: 1px solid @c_grey7;
+        .user {
+          .myflex();
+          align-items: flex-end;
+          img {
+            margin-right: 10px;
+            height: 30px;
+            width: 30px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: @c_grey7;
+          }
+          .name {
+            margin-right: 10px;
+            color: @c_primary;
+          }
+          .to-user {
+            .myflex();
+            align-items: flex-end;
+            > .tip {
+              margin-right: 10px;
+            }
+          }
+          .time {
+            color: @c_grey3;
+          }
+        }
+        .content {
+          margin-top: 10px;
+          color: @c_grey2;
+          padding-left: 40px;
+        }
+        .operate {
+          padding-left: 40px;
+          margin-top: 10px;
+          .f_between();
+          .left {
+            .reply {
+              color: @c_primary;
+              position: relative;
+              padding-right: 10px;
+            }
+            .reply:hover {
+              cursor: pointer;
+            }
+            .reply1::after {
+              content: ".";
+              display: block;
+              position: absolute;
+              right: 0;
+              top: -5px;
+            }
+            .number {
+              color: @c_primary;
+              padding-left: 4px;
+              img {
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
+                transform: translateY(8px) translateX(-3px);
+              }
+              .hide-child {
+                transform: rotate(180deg) translateY(-8px) translateX(3px);
+              }
+            }
+            .number:hover {
+              cursor: pointer;
+            }
+          }
+          .right {
+            .like {
+              img {
+                width: 28px;
+                height: 28px;
+                object-fit: contain;
+                transform: translateY(7px) translateX(-2px);
+                margin-right: 10px;
+              }
+            }
+            .report {
+              img {
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
+                transform: translateY(3px);
+              }
+            }
+            .like:hover,
+            .report:hover {
+              cursor: pointer;
+            }
+          }
+        }
+        .reply-operate {
+          width: 100%;
+          box-sizing: border-box;
+          padding-left: 44px;
+          height: 150px;
+          background: #fff;
+          position: relative;
+          textarea {
+            border-radius: 2px;
+            border: 1px solid @c_grey7;
+            width: 100%;
+            height: 100%;
+            padding: 12px 16px;
+          }
+          .reply-btn {
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+            .f_center();
+            border-radius: 20px;
+            height: 30px;
+            padding: 0 30px;
+            background: linear-gradient(45deg, @c_primary 0%, @c_purple1 100%);
+            color: #fff;
+            font-size: 16px;
+            font-family: "light_700";
+            // box-shadow: 0 2px 5px 2px @c_primary;
+            opacity: 0.9;
+            transition: all 0.3s;
+          }
+          .reply-btn:hover {
+            cursor: pointer;
+            opacity: 1;
+          }
+        }
+        .child {
+          padding-left: 70px;
+          transition: all 0.3s;
+          > li {
+          }
+        }
+      }
+    }
+  }
+  .part-4 {
+    height: 30px;
+    background: @c_grey7;
+    margin: 0 50px 50px;
+    border-radius: 4px;
+    color: @c_grey2;
+    font: 16px "light_700";
+    .f_center();
+    margin-top: 50px;
+  }
+  .part-4:hover {
+    cursor: pointer;
+  }
+}

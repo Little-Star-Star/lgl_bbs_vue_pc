@@ -1,0 +1,73 @@
+@charset 'utf-8';
+
+@import url(../../assets/css/flex.less);
+
+.share{
+    width: 140px;
+    margin-left: 50px;
+    .tip,.tip2{
+        font-size: 16px;
+        font-family: 'light_400';
+        color: @c_grey4;
+        letter-spacing: 4px;
+        margin-left: 4px;
+    }
+    ul{
+        margin-top: 30px;
+        li{
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+            .qrcode-right{
+                background: #fff;
+                position: absolute;
+                top: -60%;
+                right: -200px;
+                .qrcode-tip{
+                    font: 14px 'light_700';
+                    color: @c_grey2;
+                    padding-bottom: 20px;
+                }
+            }
+            img{
+                height: 50px;
+                width: 50px;
+                object-fit: contain;
+                transition: all .3s;
+            }
+            img:hover{
+                cursor: pointer;
+            }
+        }
+
+        li:nth-child(2),li:nth-child(4){
+            img{
+                height: 60px;
+                width: 60px;
+            }
+        }
+    }
+    .tip2{
+        margin-top: 30px;
+    }
+    .comment{
+        margin-top: 30px;
+        text-align: center;
+        position: relative;
+        img{
+            width: 80px;
+            object-fit: contain;
+        }
+        span{
+            position: absolute;
+            top: -15px;
+            right: 16px;
+            font-size: 14px;
+            font-family: 'light_700';
+            color: @c_red1;
+        }
+    }
+    .comment:hover{
+        cursor: pointer;
+    }
+}

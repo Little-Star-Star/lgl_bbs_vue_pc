@@ -1,0 +1,55 @@
+@charset 'utf-8';
+
+@import url(../../../assets/css/flex.less);
+
+.sort{
+    width: 1200px;
+    margin: 10px auto;
+    background: @c_grey6;
+    ul{
+        .myflex();
+        align-items: center;
+        li{
+            font-size: 14px;
+            .f_center();
+            font-family: 'light_700';
+            color: @c_grey3;
+            height: 30px;
+            padding: 0 10px;
+            border-right: 1px solid @c_grey7;
+            img{
+                height: 20px;
+                object-fit: contain;
+            }
+            transition: all .3s;
+        }
+        li:hover{
+            color: #fff;
+            background: @c_purple1;
+            cursor: pointer;
+        }
+        .li-actived{
+            color: #fff;
+            background: @c_purple1;
+            cursor: pointer;
+        }
+        .price{
+            font-size: 14px;
+            .f_center();
+            font-family: 'light_700';
+            color: @c_grey3;
+            margin-left: 20px;
+            span:first-child{
+                margin-right: 10px;
+            }
+            input{
+                background: @c_grey7;
+                color: @c_grey3;
+                padding: 0 10px;
+            }
+            .split{
+                margin: 0 6px;
+            }
+        }
+    }
+}

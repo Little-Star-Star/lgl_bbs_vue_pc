@@ -1,0 +1,57 @@
+@charset 'utf-8';
+
+@import url(../../../assets/css/flex.less);
+
+.security-set{
+    background: @c_grey7;
+    .content{
+        padding: 35px 60px;
+        text-align: left;
+        width: 1200px;
+        margin: 0 auto;
+        background: #fdfdfd;
+    }
+
+    .tip{
+        color: @c_grey2;
+        font-size: 16px;
+        font-family: 'light_700';
+        span{
+            color: @c_grey4;
+            font-size: 12px;
+            font-family: 'light_400';
+            margin-left: 10px;
+        }
+        .important{
+            color: @c_red1;
+            margin: 0;
+        }
+    }
+    .modify{
+        .f_between();
+        margin: 0 0 30px;
+        border-bottom: 1px dashed @c_grey7;
+        .left{
+            margin: 30px 0;
+            font-size: 14px;
+            font-family: 'light_400';
+            color: @c_grey2;
+            span{
+                color: @c_red1;
+            }
+        }
+        .right{
+            height: 32px;
+            width: 100px;
+            color: #fff;
+            background: @c_red1;
+            border-radius: 4px;
+            .f_center();
+            font-family: 'light_700';
+            font-size: 16px;
+        }
+        .right:hover{
+            cursor: pointer;
+        }
+    }
+}

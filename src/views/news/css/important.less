@@ -1,0 +1,44 @@
+@charset 'utf-8';
+
+@import url(../../../assets/css/flex.less);
+
+.important{
+    max-width: 1200px;
+    margin: 10px auto;
+    padding-bottom: 300px;
+    > .title{
+        height: 40px;
+        .myflex();
+        justify-content: space-between;
+        align-items: flex-end;
+        > .tip{
+            color: @c_grey2;
+            font-family: 'light_700';
+            font-size: 26px;
+            .f_center();
+            img{
+                margin-left: 8px;
+                height: 18px;
+                object-fit: contain;
+                transition: all .3s;
+                animation: next_auto .8s infinite;
+            }
+            @keyframes next_auto {
+                50%{
+                    margin-left: 20px;                    
+                }
+                100%{
+                    margin-left: 8px;                    
+                }
+            }
+        }
+        
+        > .time{
+            color: @c_red1;
+            font-size: 20px;
+            font-family: 'light_700';
+        }
+    }
+    > .main{
+    }
+}

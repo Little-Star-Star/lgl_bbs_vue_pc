@@ -1,0 +1,98 @@
+@charset 'utf-8';
+
+@import url(../../../assets/css/flex.less);
+
+.release-news{
+    background: @c_grey7;
+    .content{
+        padding: 35px 60px;
+        text-align: left;
+        width: 1200px;
+        margin: 0 auto;
+        background: #fdfdfd;
+        .part{
+            font-size: 14px;
+            font-family: 'light_700';
+            color: @c_grey2;
+            border-bottom: 1px dashed @c_red1;
+            padding-bottom: 30px;
+            margin-top: 30px;
+            .tip{
+                .important{
+                    color: @c_red1;
+                }
+                .title{
+                    color: @c_grey2;
+                    margin-right: 10px;
+                }
+                .text{
+                    color: @c_grey5;
+                    font-size: 12px;
+                }
+            }
+            input{
+                margin: 10px 0 0;
+                display: block;
+                padding: 0 20px;
+                width: 100%;
+                border-radius: 4px;
+                height: 30px;
+                border: 1px solid @c_grey7;
+                .myflex();
+                align-items: flex-start;
+            }
+        }
+        .editor{
+            .tip{
+                margin-bottom: 20px;
+            }
+            border: none;
+        }
+        .btn{
+            height: 36px;
+            border-radius: 4px;
+            background: @c_red1;
+            opacity: .5;
+            color: #fff;
+            font-size: 18px;
+            font-family: 'light_700';
+            .f_center();
+            transition: all .3s;
+        }
+        .btn:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+        .btn-actived{
+            opacity: 1;
+        }
+    }
+}
+
+.upload{
+    .myflex();
+    align-items: center;
+    img{
+        margin-top: 10px;
+        width: 220px;
+        height: 130px;
+        object-fit: contain;
+        background: #fff;
+    }
+    .upload-btn{
+        background: @c_dark;
+        border-radius: 4px;
+        font-size: 14px;
+        font-family: 'light_700';
+        color: #fff;
+        .f_center();
+        height: 26px;
+        width: 60px;
+        margin-left: 30px;
+        transition: all .3s;
+    }
+    .upload-btn:hover{
+        background: @c_primary;
+        cursor: pointer;
+    }
+}
