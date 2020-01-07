@@ -1,3 +1,6 @@
+# BBS 后台
+- swagger 在3000端口
+- [BBS前端 ](https://github.com/Little-Star-Star/lgl_bbs_fastify_back)
 # 管理员（账号 2319513900@qq.com 密码 111111）
 # lgl_vue_pc_graduation_project
 
